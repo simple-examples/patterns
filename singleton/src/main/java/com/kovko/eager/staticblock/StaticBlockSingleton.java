@@ -11,11 +11,18 @@ public class StaticBlockSingleton {
     static {
         try {
             instance = new StaticBlockSingleton();
-        } catch (Exception e) {
-            System.out.println("Exception has happened");
+        } catch (DuplicateSingletonException e) {
+            System.out.println("Exception has happened " + e);
         }
     }
 
     private StaticBlockSingleton() {
+        if (instance!=null){
+            throw new DuplicateSingletonException();
+        }
+    }
+
+    public static StaticBlockSingleton getInstance() {
+        return instance;
     }
 }
