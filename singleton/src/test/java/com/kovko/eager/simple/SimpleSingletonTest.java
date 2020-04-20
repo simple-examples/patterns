@@ -16,8 +16,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 class SimpleSingletonTest {
 
     @Test
-    @DisplayName("Singletons are always the same")
-    void singletonTest() {
+    @DisplayName("Singleton is always the same")
+    void testSingleton() {
 
         SimpleSingleton simpleSingletonA = SimpleSingleton.getInstance();
         SimpleSingleton simpleSingletonB = SimpleSingleton.getInstance();
@@ -27,7 +27,7 @@ class SimpleSingletonTest {
 
     @Test
     @DisplayName("Create another singleton instance with reflection")
-    void reflectionBreak() throws IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException {
+    void testReflectionBreak() throws IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException {
 
         SimpleSingleton instance = SimpleSingleton.getInstance();
 
