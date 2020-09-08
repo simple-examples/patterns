@@ -1,4 +1,4 @@
-package com.kovko.lazy.syncronized;
+package com.kovko.singleton;
 
 /**
  * Author: eukovko

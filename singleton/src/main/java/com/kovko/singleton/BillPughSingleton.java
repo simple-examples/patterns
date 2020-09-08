@@ -1,4 +1,4 @@
-package com.kovko.lazy.pugh;
+package com.kovko.singleton;
 
 /**
  * Author: eukovko

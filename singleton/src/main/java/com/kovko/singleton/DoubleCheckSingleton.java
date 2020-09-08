@@ -1,4 +1,4 @@
-package com.kovko.lazy.doublecheck;
+package com.kovko.singleton;
 
 /**
  * Author: eukovko

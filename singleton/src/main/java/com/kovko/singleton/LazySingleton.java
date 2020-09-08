@@ -1,4 +1,4 @@
-package com.kovko.lazy.simple;
+package com.kovko.singleton;
 
 /**
  * Author: eukovko
@@ -9,6 +9,9 @@ public class LazySingleton {
     private static LazySingleton instance;
 
     private LazySingleton() {
+        if (instance != null) {
+            throw new IllegalStateException("Cannot create another instance of the singleton");
+        }
     }
 
     public static LazySingleton getInstance() {
